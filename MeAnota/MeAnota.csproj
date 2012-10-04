@@ -200,7 +200,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201209302353425_IndiceUsuario.cs" />
+    <Compile Include="Migrations\201209302353425_IndiceUsuario.Designer.cs">
+      <DependentUpon>201209302353425_IndiceUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Anotacao.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Bloco.cs" />
+    <Compile Include="Models\MeAnotaContext.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +330,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201209302353425_IndiceUsuario.resx">
+      <DependentUpon>201209302353425_IndiceUsuario.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
