@@ -9,6 +9,7 @@ using MeAnota.Models;
 
 namespace MeAnota.Controllers
 {
+    [Authorize]
     public class BlocoController : Controller
     {
         private MeAnotaContext db = new MeAnotaContext();

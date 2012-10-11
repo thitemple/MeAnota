@@ -25,11 +25,11 @@ namespace MeAnota.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<UsersContext>(null);
+                Database.SetInitializer<MeAnotaContext>(null);
 
                 try
                 {
-                    using (var context = new UsersContext())
+                    using (var context = new MeAnotaContext())
                     {
                         if (!context.Database.Exists())
                         {
@@ -38,7 +38,7 @@ namespace MeAnota.Filters
                         }
                     }
 
-                    WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+                    WebSecurity.InitializeDatabaseConnection("MeAnotaConnString", "Usuario", "Id", "Email", autoCreateTables: true);
                 }
                 catch (Exception ex)
                 {
